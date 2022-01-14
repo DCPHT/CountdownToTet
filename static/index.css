@@ -1,0 +1,49 @@
+body {
+  color: black;
+}
+
+.countdown {
+  background-image: url("NhamDan2022.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 1920px 969px;
+}
+
+.my_nav {
+  height: 6rem;
+}
+
+.countdown {
+  height: 969px;
+}
+
+.my_footer {
+  height: 10.4rem;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 3em;
+  list-style-type: none;
+  padding: 2em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 6rem;
+}
+
+#lunar {
+  display: inline-block;
+  font-size: 6em;
+  list-style-type: none;
+  padding: 2em;
+  text-transform: uppercase;
+}

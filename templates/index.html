@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <title>Tết ơi! Đến Phước Hải</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <!-- <div class="row d-flex justify-content-center mx-auto shadow-sm fixed-top my_nav border">
+        <ul class="nav nav-tabs" id="navId">
+          <li class="nav-item">
+            <a href="#tab1Id" class="nav-link active">Active</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tab5Id" class="nav-link">Another link</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Disabled</a>
+          </li>
+        </ul>
+      </div> -->
+      <div class="row d-flex flex-column justify-content-center align-items-center mx-auto countdown">
+        <h1 id="headline">Tết ơi đến đây đi</h1>
+        <ul id='countdown'>
+          <li><span id="days"></span>Ngày</li>
+          <li><span id="hours"></span>Giờ</li>
+          <li><span id="minutes"></span>Phút</li>
+          <li><span id="seconds"></span>Giây</li>
+        </ul>
+        <div id="lunar" hidden></div>
+      </div>
+      <!-- <div class="row d-flex justify-content-center mx-auto my_footer border">
+        <p>Xin chao {{name}}</p>        
+      </div> -->
+    </div>
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename='countdown.js')}}"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  </body>
+</html>
