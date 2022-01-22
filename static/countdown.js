@@ -1,3 +1,10 @@
+function convert(time){
+  if(time < 10){
+    return '0'+ time
+  }
+  return time;
+}
+
 // Get data from python
 var tet_date;
 fetch("/security")
@@ -22,14 +29,13 @@ fetch("/security")
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      
-        // Display the result
-        document.getElementById("days").innerText = days,
-        document.getElementById("hours").innerText = hours,
-        document.getElementById("minutes").innerText = minutes,
-        document.getElementById("seconds").innerText = seconds;
+      // Display the result
+      document.getElementById("days").innerText = convert(days),
+      document.getElementById("hours").innerText = convert(hours),
+      document.getElementById("minutes").innerText = convert(minutes),
+      document.getElementById("seconds").innerText = convert(seconds);
 
-        document.getElementById("countdown").hidden = false;
+      document.getElementById("countdown").hidden = false;
       // If the count down is finished, write some text
       if (distance <= 0) {
         clearInterval(x);

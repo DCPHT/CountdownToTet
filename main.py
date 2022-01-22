@@ -1,3 +1,4 @@
+from distutils.log import debug
 from flask import Flask, jsonify, request, render_template
 from views import views
 
