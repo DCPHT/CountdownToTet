@@ -1,16 +1,20 @@
 body {
-  color: black;
+  color: #ad110c;
 }
 
 .countdown {
   background-image: url("NhamDan2022.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: 1920px 969px;
+  background-size: 100%;
 }
 
 .my_nav {
   height: 6rem;
+  background-color: #c79872;
+  position: sticky;
+  top: 0;
+  font-size: 2em;
 }
 
 .countdown {
@@ -18,10 +22,13 @@ body {
 }
 
 .my_footer {
-  height: 10.4rem;
+  height: 6rem;
+  background-color: #811323;
+  color: #c79872;
+  font-size: 2em;
 }
 
-h1 {
+#headline, #endline {
   font-weight: normal;
   letter-spacing: 0.125rem;
   text-transform: uppercase;

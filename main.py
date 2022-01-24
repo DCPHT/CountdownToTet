@@ -24,4 +24,4 @@ def hello():
         message = {'date':'FEB 1, 2022 00:00:00'}
         return jsonify(message) 
 
-app.run(host='0.0.0.0')
+app.run(host='0.0.0.0', debug=True)
