@@ -188,7 +188,7 @@ Particle.prototype.draw = function() {
 // create particle group/explosion
 function createParticles( x, y ) {
 	// increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
-	var particleCount = 1000;
+	var particleCount = 500;
 	while( particleCount-- ) {
 		particles.push( new Particle( x, y ) );
 	}
@@ -202,8 +202,8 @@ function loop() {
 	// increase the hue to get different colored fireworks over time
 	// hue += 0.5;
   
-  // create random color
-  hue= random(0, 360 );
+	// create random color
+	hue= random(0, 360 );
 	
 	// normally, clearRect() would be used to clear the canvas
 	// we want to create a trailing effect though
@@ -234,7 +234,7 @@ function loop() {
 	if( timerTick >= timerTotal ) {
 		if( !mousedown ) {
 			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
-			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 100, ch / 2 ) ) );
 			timerTick = 0;
 		}
 	} else {
@@ -245,7 +245,9 @@ function loop() {
 	if( limiterTick >= limiterTotal ) {
 		if( mousedown ) {
 			// start the firework at the bottom middle of the screen, then set the current mouse coordinates as the target
-			fireworks.push( new Firework( cw / 2, ch, mx, my ) );
+			if(my > 100){
+				fireworks.push( new Firework( cw / 2, ch, mx, my - 100) );
+			}
 			limiterTick = 0;
 		}
 	} else {

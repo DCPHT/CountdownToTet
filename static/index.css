@@ -7,18 +7,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100%;
+  height: 969px;
 }
 
 .my_nav {
   height: 6rem;
   background-color: #c79872;
-  position: sticky;
-  top: 0;
   font-size: 2em;
-}
-
-.countdown {
-  height: 969px;
 }
 
 .my_footer {
@@ -53,4 +48,14 @@ li span {
   list-style-type: none;
   padding: 2em;
   text-transform: uppercase;
+}
+
+.btn {
+  color: #ad110c;
+  height: 4rem;
+  font-size: 1em;
+}
+
+.btn:hover {
+  color: #e55031;
 }

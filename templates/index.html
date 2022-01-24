@@ -13,10 +13,10 @@
   <body>
     <div class="container-fluid p-0">
       <div class="my_nav shadow-sm d-flex align-items-center">
-        <div class="mr-auto">logo</div>
+        <div class="mr-auto ml-3">logo</div>
         <div class="d-flex flex-fill justify-content-center">
-          <div class="mr-5 px-3">Lịch Âm</div>
-          <div class="mr-5 px-3">Chúc Tết</div>
+          <a href="#" class="mr-5 px-3 btn">Lịch Âm</a>
+          <a href="#" class="mr-5 px-3 btn">Chúc Tết</a>
         </div>
       </div>
       <div class="row d-flex flex-column justify-content-center align-items-center mx-auto countdown">
@@ -27,25 +27,25 @@
           <li><span id="minutes"></span>Phút</li>
           <li><span id="seconds"></span>Giây</li>
         </ul>
-        <h1 id="endline">Nhâm Dần 2022</h1>
         <div id="lunar" hidden></div>
-      </div>
-      <div id="canvas-container">
-        <canvas id="canvas" style="width: 100%; height: 100%;"
-          >Your browser doesn't support canvas</canvas
-        >
+        <h1 id="endline">Nhâm Dần 2022</h1>
+        <div id="canvas-container">
+          <canvas id="canvas"
+            >Your browser doesn't support canvas
+          </canvas>
+        </div>
       </div>
       <div hidden>
-        <audio autoplay loop>
+        <audio id="music" loop>
           <source src="{{url_for('static', filename='music.mp3')}}" type="audio/mp3">
         </audio>
       </div>
       <div class="my_footer d-flex align-items-center">
-        <div class="mr-auto">
+        <div class="mr-auto ml-3">
           <img alt="logoTeam" class="center-block" src="{{url_for('static', filename='eee.jpg')}}" style="width: 40%; height: 40%;"/>
         </div>
         <div class="d-flex flex-fill justify-content-center">
-          <div class="mr-5 px-3">Một sản phâm ngẫu hứng của 2 sinh viên rảnh rỗi</div>
+          <div class="mr-5 px-3">Một sản phẩm ngẫu hứng của 2 sinh viên rảnh rỗi</div>
         </div>
       </div>
     </div>
