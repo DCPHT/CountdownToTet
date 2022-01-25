@@ -20,8 +20,8 @@
         </div>
       </div>
       <div class="row d-flex flex-column justify-content-center align-items-center mx-auto countdown">
-        <h1 id="headline" style="margin-top: 3em;">Tết ơi! đến đây đi</h1>
-        <ul id='countdown'>
+        <h1 id="headline">Tết ơi! đến đi</h1>
+        <ul id="countdown">
           <li><span id="days"></span>Ngày</li>
           <li><span id="hours"></span>Giờ</li>
           <li><span id="minutes"></span>Phút</li>
@@ -42,10 +42,10 @@
       </div>
       <div class="my_footer d-flex align-items-center">
         <div class="mr-auto ml-3">
-          <img alt="logoTeam" class="center-block" src="{{url_for('static', filename='eee.jpg')}}" style="width: 40%; height: 40%;"/>
+          <img alt="logoTeam" class="center-block" src="{{url_for('static', filename='eee.jpg')}}" id="logoTeam"/>
         </div>
-        <div class="d-flex flex-fill justify-content-center">
-          <div class="mr-5 px-3">Một sản phẩm ngẫu hứng của 2 sinh viên rảnh rỗi</div>
+        <div class="d-flex flex-fill justify-content-center" id="text_container">
+          <div id="text_footer" class="mr-5 px-3">Một sản phẩm ngẫu hứng của 2 sinh viên rảnh rỗi</div>
         </div>
       </div>
     </div>

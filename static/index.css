@@ -7,7 +7,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100%;
-  height: 969px;
+  height: 1024px;
+}
+
+#countdown {
+  padding: 0;
+}
+
+#text_footer, .countdown, #headline{
+  text-align: center;
 }
 
 .my_nav {
@@ -26,7 +34,12 @@ body {
 #headline, #endline {
   font-weight: normal;
   letter-spacing: 0.125rem;
+  font-size: 3em;
   text-transform: uppercase;
+}
+
+#headline {
+  margin-top: 3em;
 }
 
 li {
@@ -58,4 +71,184 @@ li span {
 
 .btn:hover {
   color: #e55031;
+}
+
+#logoTeam {
+  width: 40%;
+  height: 40%;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* ipad pro*/
+  .countdown {
+    height: 1366px;
+  }
+
+  li {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 812px) {
+  /* iphone X*/
+  li {
+    padding: 1em;    
+  }
+  
+  li span {
+    font-size: 6rem;
+  }
+
+  .my_nav {
+    font-size: 2em;
+  }
+
+  .my_footer {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 768px) {  
+  /* ipad */
+  .countdown {
+    height: 1024px;
+  }
+
+  li {
+    padding: 1em;
+  }
+  
+  li span {
+    font-size: 5rem;
+  }
+
+  .my_nav {
+    height: 5rem;
+    font-size: 1.5em;
+  }
+
+  .btn {
+    height: 3rem;
+  }
+
+  #headline {
+    margin-top: 0;
+  }
+  
+  .my_footer {
+    height: 5rem;
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  /* iphone 6/7/8 plus*/
+  .countdown {
+    height: 736px;
+  }
+
+  li {
+    font-size: 2em;
+  }
+
+  li span {
+    font-size: 3rem;
+  }
+
+  .my_nav {
+    height: 4rem;
+    font-size: 1em;
+  }
+
+  .btn {
+    height: 2rem;
+  }
+
+  .my_footer {
+    height: 4rem;
+    font-size: 1em;
+  }
+
+  #headline, #endline {
+    font-size: 1.5em;
+  }
+
+  #logoTeam {
+    width: 40%;
+    height: 40%;
+  }
+
+  .px-3 {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  /* iphone 6/7/8*/
+  .countdown {
+    height: 667px;
+  }
+
+  .my_nav {
+    height: 3rem;
+  }
+
+  .btn {
+    height: 1.5rem;
+  }
+
+  .my_footer {
+    height: 3rem;
+    font-size: 0.75em;
+  }
+
+  #headline, #endline {
+    font-size: 1.5em;
+  }
+
+  #logoTeam {
+    width: 30%;
+    height: 30%;
+  }
+
+  #text_container {
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-height: 812px) {
+  /* iphone X*/
+  .countdown {
+    height: 812px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  /* iphone 5/SE */
+  .countdown {
+    height: 568px;
+  }
+
+  #text_container {
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  /* Galaxy Fold*/
+  .countdown {
+    height: 653px;
+  }
+
+  .my_nav {
+    font-size: 0.8em;
+  }
+
+  .my_footer {
+    font-size: 0.55em;
+  }
+
+  #text_container {
+    margin-right: 0;
+  }
 }
