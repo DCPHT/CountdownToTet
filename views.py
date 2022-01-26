@@ -12,7 +12,6 @@ def home():
 def homepage():
     return render_template('homepage.html')
 
-
 @views.route('/calender')
-def fireworks():
+def calender():
     return render_template('calender.html')
