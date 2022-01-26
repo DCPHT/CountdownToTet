@@ -43,6 +43,8 @@ fetch("/security")
         document.getElementById("lunar").hidden = false;
         document.getElementById("countdown").hidden = true;
         document.getElementById("headline").hidden = true;
+        document.getElementById("endline").hidden = false;
+        document.getElementById("canvas-container").hidden = false;
         document.getElementById("music").play();
       }
     }, 1000);
