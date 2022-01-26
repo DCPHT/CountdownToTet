@@ -10,58 +10,31 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}" />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', filename='fireworks.css')}}"
-    />
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
     <title>Tết ơi! Đến Phước Hải</title>
   </head>
   <body>
+    <div class="my_nav d-flex align-items-center">
+      <a class="btn" href="https://tetphuochai.fun" id="logo">
+        Trang Chủ
+      </a>
+      <div class="d-flex flex-fill justify-content-center">
+        <a href="{{ url_for('views.calender') }}" class="mr-5 px-3 btn"
+          >Lịch Âm</a
+        >
+        <a href="#" class="mr-5 px-3 btn">Chúc Tết</a>
+      </div>
+    </div>
     <div class="container-fluid p-0">
-      <div class="my_nav shadow-sm d-flex align-items-center">
-        <a class="btn" href="https://tetphuochai.fun" id="logo">
-          Trang Chủ
-        </a>
-        <div class="d-flex flex-fill justify-content-center">
-          <a href="{{ url_for('views.calender') }}" class="mr-5 px-3 btn"
-            >Lịch Âm</a
-          >
-          <a href="#" class="mr-5 px-3 btn">Chúc Tết</a>
-        </div>
-      </div>
-      <div class="row d-flex flex-column justify-content-center align-items-center mx-auto countdown">
-        <h1 id="headline">Tết ơi! đến đi</h1>
-        <ul id="countdown">
-          <li><span id="days"></span>Ngày</li>
-          <li><span id="hours"></span>Giờ</li>
-          <li><span id="minutes"></span>Phút</li>
-          <li><span id="seconds"></span>Giây</li>
-        </ul>
-        <div id="lunar" hidden></div>
-        <h1 id="endline" hidden>Nhâm Dần 2022</h1>
-        <div id="canvas-container" hidden>
-          <canvas id="canvas"
-            >Your browser doesn't support canvas
-          </canvas>
-        </div>
-      </div>
-      <div hidden>
-        <audio id="music" loop>
-          <source
-            src="{{url_for('static', filename='music.mp3')}}"
-            type="audio/mp3"
-          />
-        </audio>
-      </div>
-      <div class="my_footer d-flex align-items-center">
-        <a class="btn" href="https://tetphuochai.fun/views/homepage" id="logo">
-          <img alt="logoTeam" class="center-block" src="{{url_for('static', filename='PH_Team.png')}}" id="logoTeam"/>
-        </a>
-        <div class="d-flex flex-fill justify-content-center" id="text_container">
-          <div id="text_footer" class="mr-5 px-3">Một sản phẩm ngẫu hứng của 2 sinh viên rảnh rỗi</div>
-        </div>
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div class="my_footer d-flex align-items-center">
+      <a class="btn" href="https://tetphuochai.fun/views/homepage" id="logo">
+        <img alt="logoTeam" class="center-block" src="{{url_for('static', filename='PH_Team.png')}}" id="logoTeam"/>
+      </a>
+      <div class="d-flex flex-fill justify-content-center" id="text_container">
+        <div id="text_footer" class="mr-5 px-3">Một sản phẩm ngẫu hứng của 2 sinh viên rảnh rỗi</div>
       </div>
     </div>
     <script

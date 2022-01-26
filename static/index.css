@@ -1,6 +1,7 @@
 body {
   color: #ad110c;
   background-color: #fbf5df;
+  font-family: cursive;
 }
 
 .countdown {
@@ -27,13 +28,18 @@ body {
   height: 6rem;
   background-color: #c79872;
   font-size: 2em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0 0 2px 2px;
+  z-index: 2;
 }
 
 .my_footer {
   height: 6rem;
+  width: 100%;
   background-color: #811323;
   color: #c79872;
   font-size: 2em;
+  border-radius: 2px 2px 0 0;
 }
 
 #headline, #endline {

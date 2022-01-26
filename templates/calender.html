@@ -1,53 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lịch âm dương</title>
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', filename='calender.css')}}"
-    />
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
-  </head>
-
-  <body class="light">
-    <div class="calendar">
-      <div class="calendar-header">
-        <span class="month-picker" id="month-picker">February</span>
-        <div class="year-picker">
-          <span class="year-change" id="prev-year">
-            <pre><</pre>
-          </span>
-          <span id="year">2021</span>
-          <span class="year-change" id="next-year">
-            <pre>></pre>
-          </span>
-        </div>
-      </div>
-      <div class="calendar-body">
-        <div class="calendar-week-day">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div>Fri</div>
-          <div>Sat</div>
-        </div>
-        <div class="calendar-days"></div>
-      </div>
-      <div class="calendar-footer">
-        <div class="toggle">
-          <span>Dark Mode</span>
-          <div class="dark-mode-switch">
-            <div class="dark-mode-switch-ident"></div>
+{% extends "index.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='index.css')}}"/>
+<link rel="stylesheet" href="{{url_for('static', filename='calender.css')}}"/>
+<h1 class="text_header">Lịch Âm Dương</h1>
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="calendar">
+        <div class="calendar-header">
+          <span class="month-picker" id="month-picker">February</span>
+          <div class="year-picker">
+            <span class="year-change" id="prev-year">
+              <pre><</pre>
+            </span>
+            <span id="year">2021</span>
+            <span class="year-change" id="next-year">
+              <pre>></pre>
+            </span>
           </div>
         </div>
+        <div class="calendar-body">
+          <div class="calendar-week-day">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="calendar-days"></div>
+        </div>
+        <div class="month-list"></div>
       </div>
-      <div class="month-list"></div>
     </div>
-
-    <script src="{{url_for('static', filename='calc_day.js')}}"></script>
-  </body>
-</html>
+    <div class="col">
+      <h2>1. Lịch là gì?</h2>
+      <br/>
+      <div>
+        Nhu cầu ghi chép lại những sự kiện quan trọng trong cộng đồng đã xuất hiện ngay từ thuở xa xưa, khi con người còn chưa có chữ viết, chỉ có thể dùng hình vẽ kí hiệu trên các hang động, thân cây, xương thú.
+      </div>
+      <br/>
+      <div>
+        Xuất phát từ chính nhu cầu này của con người nên lịch đã ra đời. Lịch ra đời đã khiến con người vận động có tổ chức, có thời gian thống nhất hơn rất nhiều. 
+      </div>
+      <br/>
+      <img class="imgcenter" src="https://cms.lichngaytot.com/medias/standard/2019/4/11/lich-la-gi.jpeg" alt="lich la gi">
+      <div class="imgLichNgayTot">
+        Lịch ra đời giúp con người làm việc có tổ chức hơn
+      </div>
+      <br/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div>
+        Lịch là gì? Từ “lịch” tức “Calendar” hay “calendrier” của các ngôn ngữ châu Âu vốn bắt nguồn từ chữ “Calendae” (Kalendae) trong tiếng Latin.
+      </div>
+      <br/>
+      <div>
+        Từ này có nghĩa là “ngày đầu tiên của tháng La Mã”, đây là thời điểm người ta dành để công bố thời gian tổ chức các phiên chợ, lễ hội hoặc các sự kiện quan trọng khác.
+      </div>
+      <br/>
+      <div>  
+        Lịch được xây dựng theo các quy tắc riêng, là một hệ thống có tổ chức, dùng để ghi chép, tính toán thời gian theo cách thuận tiện nhất, giúp con người sống có nề nếp, phục vụ các lễ nghi tôn giáo, cũng như phục vụ các mục đích lịch sử và khoa học khác nhau.
+      </div>
+      <br/>
+      <h2>2. Các loại lịch phổ biến trên thế giới</h2>
+      <br/>
+      <div>
+        Trên thế giới có rất nhiều các loại lịch khác nhau, nhưng được biết đến và sử dụng phổ biến nhất hiện nay là dương lịch, âm lịch, âm dương lịch.
+      </div>
+      <br/>
+      <h3>Dương lịch</h3>
+      <br/>
+      <div>
+        Dương lịch là loại lịch mà ngày tháng chỉ ra vị trí của Trái Đất trong chuyển động xung quanh Mặt Trời, hay nói cách khác là vị trí biểu kiến của Mặt Trời trên thiên cầu.
+      </div>
+      <br/>
+      <div>
+        Đối với người Việt hiện nay, thuật ngữ “dương lịch” nói chung chỉ là lịch Gregorius. Lịch Gregorius, còn gọi là Tây lịch hay Công lịch, là một bộ lịch do Giáo hoàng Grêgôriô XIII đưa ra vào năm 1582.
+      </div>
+      <br/>
+      <div>  
+        Loại lịch này chia một năm thành 12 tháng với 365 ngày, cứ mỗi 4 năm thì thêm 1 ngày vào cuối tháng 2 để tạo thành năm nhuận với 366 ngày.
+      </div>
+      <br/>
+      <h3>Âm lịch</h3>
+      <br/>
+      <div>
+        Âm lịch là gì? Đây là loại lịch được tính dựa trên các chu kỳ của tuần trăng, tuy nhiên, lịch âm thuần túy nhất trên thực tế chỉ có lịch Hồi giáo. 
+      </div>
+      <br/>
+      <div>
+        Trong lịch Hồi giáo, mỗi năm chỉ có đúng 12 tháng Mặt Trăng, và lịch này được sử dụng chủ yếu cho mục đích tín tưỡng và tôn giáo. 
+      </div>
+      <br/>
+      <img class="imgcenter" src="https://cms.lichngaytot.com/medias/standard/2019/4/11/cac-loai-lich-pho-bien.png" alt="cac loai lich pho bien">
+      <div class="imgLichNgayTot">
+        Lịch âm được tính dựa theo chu kỳ của mặt trăng
+      </div>
+      <br/>
+      <div>  
+        Đặc trưng của loại lịch này là sự liên tục của chu kỳ trăng tròn, nó hoàn toàn không gắn với các mùa trong năm. Đây là lý do khiến thời gian mỗi năm trong âm lịch của Hồi giáo ngắn khoảng 11 hay 12 ngày so với các nước sử dụng dương lịch. 
+      </div>
+      <br/>
+      <div>  
+        Lịch chỉ khớp với năm dương lịch sau mỗi 33 hoặc 34 năm Hồi giáo.
+      </div>
+      <br/>
+      <h3>Âm dương lịch</h3>
+      <br/>
+      <div>
+        Âm dương lịch là lịch được tính căn cứ theo cả chuyển động của Mặt Trăng và chuyển động biểu kiến của Mặt Trời.
+      </div>
+      <br/>
+      <div>
+        Trong loại lịch này, các tháng được duy trì theo chu kỳ của Mặt Trăng, tuy nhiên cũng có trường hợp các tháng nhuận được thêm vào theo quy tắc nhất định để điều chỉnh các chu kỳ trăng cho ăn khớp với năm dương lịch. 
+      </div>
+      <br/>
+      <div>  
+        Hiện nay, người Việt Nam nhắc đến “âm lịch” là để chỉ nông lịch, một loại lịch được sử dụng phổ biến ở các quốc gia và khu vực chịu ảnh hưởng của văn hóa Trung Hoa.
+      </div>
+      <br/>
+      <div> 
+        Về thực chất, cách tính loại âm dương lịch này là nhờ vào sự kết hợp của âm lịch thuần túy với thời điểm xảy ra tiết khí được tính theo dương lịch.
+      </div>
+      <br/>
+      <div>  
+        Công dụng của loại lịch này là để tính các ngày rằm, mùng 1, các lễ hội trọng đại trong một năm như Tết Nguyên Đán, rằm tháng bảy, Tết Trung thu… cũng như để chọn ngày tốt cho các công việc lớn như ma chay, cưới xin, xây sửa nhà cửa…
+      </div>
+      <br/>
+      <h2>3. Lịch xuất hiện từ khi nào?</h2>
+      <br/>
+      <h3>Châu Âu</h3>
+      <br/>
+      <div>
+        Người ta phát hiện ra rằng, cách đây hơn 20 nghìn năm, các thợ săn ở khu vực châu Âu đã dùng dùng dụng cụ để khắc lên thân cây hoặc xương thú để tính các ngày theo tuần trăng. 
+      </div>
+      <br/>
+      <div>
+        Cách đây hơn 4000 năm, có lẽ các cột đá Stonehenge ở Anh đã được xếp đặt để xác định các mùa và một số thời điểm quan trọng trong năm.
+      </div>
+      <br/>
+      <div>  
+        Ở Hy Lạp, các di vật khảo cổ bằng đất sét có niên đại từ thế kỷ XIII TCN cũng cho thấy người Hy Lạp đã sử dụng Lịch âm gồm các tháng có 29 và 30 ngày xen kẽ nhau. 
+      </div>
+      <br/>
+      <div>  
+        Ở La Mã, lịch lần đầu tiên xuất hiện vào thế kỷ thứ VII hoặc VIII TCN gồm 304 ngày, trong đó có tổng cộng 10 tháng với 6 tháng 30 ngày và 4 tháng 31 ngày.  
+      </div>
+      <br/>
+      <h3>Người Maya</h3>
+      <br/>
+      <div>
+        Người Maya xây dựng lịch dựa trên chu kỳ hoạt động của cả Mặt Trăng, Mặt Trời và sao Kim. Lịch của họ có 2 loại gồm 260 ngày vào 365 ngày.  
+      </div>
+      <br/>
+      <h3>Ai Cập</h3>
+      <br/>
+      <div>
+        Bộ Lịch đầu tiên được người Ai Cập sáng tạo ra cách đây hơn 10.000 năm, gồm 360 ngày với 12 tháng, mỗi tháng có 30 ngày.
+      </div>
+      <br/>
+      <img class="imgcenter" src="https://cms.lichngaytot.com/medias/standard/2019/4/11/lich-ai-cap-co.jpeg" alt="lich ai cap co">
+      <div class="imgLichNgayTot">
+        Lịch của người Ai Cập cổ đại
+      </div>
+      <br/>  
+      <div>
+        Nhưng sau đó, kết hợp với việc quan sát thiên văn và hiện tượng thủy triều trên sông Nin mà người ta đã điều chỉnh, cải tiến thành loại lịch mới gồm 365 ngày.
+      </div>
+      <br/>  
+      <h3>Người Babylon</h3>
+      <br/>  
+      <div>
+        Người Babylon bắt đầu sử dụng lịch vào khoảng 2000 năm TCN. Lịch gồm 12 tháng, xen kẽ các tháng có 29 và 30 ngày. Đến năm 380 TCN, lịch được cải tiên và trở nên chi tiết hơn khi có thêm sự kết hợp giữa tuần trăng và thời tiết.
+      </div>
+      <br/>  
+      <h3>Ấn Độ</h3>
+      <br/>  
+      <div>
+        Lịch cổ nhất của Ấn Độ xuất hiện từ khoảng 1000 năm TCN. Loại lịch này chia một năm thành 360 ngày với 12 tháng âm, mỗi tháng có 27 hoặc 28 ngày. Sau mỗi 60 tháng, số ngày thiếu sẽ được bù thêm bằng cách chèn thêm tháng nhuận vào.
+      </div>
+      <br/>  
+      <h3>Trung Quốc</h3>
+      <br/>  
+      <div>
+        Lịch âm dương xuất hiện ở Trung Quốc từ thế kỷ XIV TCN do nhà Thương tạo ra, thế nhưng theo truyền thuyết, lịch còn có thể xuất hiện sớm hơn nữa, từ thời Tam Hoàng Ngũ Đế, tức năm 2637 TCN, do Hoàng Đế sáng tạo ra.
+      </div>
+      <br/>  
+      <div> 
+        Tuy nhiên, từ đời nhà Thương, người Trung Hoa đã biết một năm dài 365.25 ngày, còn tuần trăng dài 29.5 ngày
+      </div>
+      <br/>  
+      <h2>4. Lịch Việt Nam ra đời từ khi nào?</h2>
+      <br/>  
+      <div>
+        Từ thời xa xưa, Lịch đã giữ một vị trí vô cùng quan trọng trong tiềm thức của người Á Đông, không chỉ ở Trung Hoa có sự kiện vua ban lịch hàng năm cho thần dân, để thân dân theo đó mà thực hiện tế lễ, nông vụ; mà ở Việt Nam, lễ ban lịch hàng năm, hay còn gọi là Ban Sóc cũng diễn ra rất long trọng.
+      </div>
+      <br/>  
+      <div>
+        Qua các thời kỳ phong kiến, tuy các cơ quan làm lịch được thay đổi nhiều lần, thế nhưng đều được tổ chức rất quy củ. Các cơ quan này không chỉ làm lịch mà còn có nhiệm vụ dự báo thời tiết, quan sát thiên văn rồi làm khải tấu trình lên vua. 
+      </div>
+      <br/>    
+      <img class="imgcenter" src="https://cms.lichngaytot.com/medias/standard/2019/4/11/lich-viet-nam.jpg" alt="lich viet nam">
+      <div class="imgLichNgayTot">
+        Việt Nam hiện nay sử dụng Âm dương lịch
+      </div>
+      <br/>    
+      <div>
+        Trong 1000 năm Bắc thuộc cho tới năm 1054, tức thời vua Lý Thái Tông, nước ta sử dụng chung lịch với lịch của Trung Hoa.
+      </div>
+      <br/>    
+      <div>  
+        Kể từ sau năm 1054, khi vua Lý Thánh tông đã lên ngôi, có tư liệu cho rằng nước ta đã bắt đầu tự soạn lịch riêng, dựa theo các phép lịch bên Trung Hoa.
+      </div>
+      <br/>    
+      <div>
+        Từ năm 1407, khi bị nhà Minh đô hộ, nước ta đã chuyển sang dùng lịch cùng với nhà Minh, mãi cho đến thời vua Gia Long, năm 1812.
+      </div>
+      <br/>    
+      <div>
+        Từ 1813 - 1945, khi Pháp cai trị nước ta, họ đã lập ra bảng đối chiếu lịch Dương với lịch Âm dương lấy từ Trung Quốc, trong khi nhà Nguyễn vẫn tự soạn và ban lịch riêng theo phép lịch thời Hiến (giống như nhà Thanh) ở Trung Kỳ.
+      </div>
+      <br/>    
+      <div>  
+        Từ 1946 – 1967,  Việt Nam không tự biên soạn Lịch nữa, các nhà xuất bản dịch từ lịch Trung Quốc sang.
+      </div>
+      <br/>    
+      <div>     
+        Từ 1968 – nay, sau khi trải qua nhiều lần thay đổi múi giờ, giờ chính thức của Việt Nam được công bố tính theo múi giờ số 7, trong khi đó, Trung Quốc lại tính theo múi giờ số 8, vì thế, Việt Nam tiếp tục tự biên soạn lịch riêng cho tới nay.
+      </div>
+      <br/>
+      <div>
+        (Tổng hợp)
+      </div>
+      <br/>    
+      <div>
+        Nguồn: <a href="https://lichngaytot.com/chon-ngay-tot/lich-la-gi-585-197599.html">https://lichngaytot.com/chon-ngay-tot/lich-la-gi-585-197599.html</a>
+      </div>
+      <br/>
+    </div>
+  </div>
+</div>
+<script src="{{url_for('static', filename='calc_day.js')}}"></script>
+{% endblock %}
