@@ -21,7 +21,9 @@
   <body>
     <div class="container-fluid p-0">
       <div class="my_nav shadow-sm d-flex align-items-center">
-        <div class="mr-auto ml-3">logo</div>
+        <a class="btn" href="https://tetphuochai.fun" id="logo">
+          Trang Chủ
+        </a>
         <div class="d-flex flex-fill justify-content-center">
           <a href="{{ url_for('views.calender') }}" class="mr-5 px-3 btn"
             >Lịch Âm</a
@@ -43,6 +45,11 @@
         <h1 id="endline">Nhâm Dần 2022</h1>
         <div id="canvas-container">
           <canvas id="canvas">Your browser doesn't support canvas </canvas>
+        <h1 id="endline" hidden>Nhâm Dần 2022</h1>
+        <div id="canvas-container" hidden>
+          <canvas id="canvas"
+            >Your browser doesn't support canvas
+          </canvas>
         </div>
       </div>
       <div hidden>
@@ -69,6 +76,11 @@
           <div id="text_footer" class="mr-5 px-3">
             Một sản phẩm ngẫu hứng của 2 sinh viên rảnh rỗi
           </div>
+        <a class="btn" href="https://tetphuochai.fun/views/homepage" id="logo">
+          <img alt="logoTeam" class="center-block" src="{{url_for('static', filename='PH_Team.png')}}" id="logoTeam"/>
+        </a>
+        <div class="d-flex flex-fill justify-content-center" id="text_container">
+          <div id="text_footer" class="mr-5 px-3">Một sản phẩm ngẫu hứng của 2 sinh viên rảnh rỗi</div>
         </div>
       </div>
     </div>
