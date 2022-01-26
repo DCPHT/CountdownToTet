@@ -4,11 +4,12 @@ body {
 }
 
 .countdown {
+  margin-top: 5%;
+  min-height: 1250px;
   background-image: url("NhamDan2022.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-size: 100%;
-  height: 1024px;
+  background-position: center;
 }
 
 #countdown {
@@ -20,6 +21,9 @@ body {
 }
 
 .my_nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 6rem;
   background-color: #c79872;
   font-size: 2em;
@@ -86,10 +90,6 @@ li span {
 
 @media only screen and (max-width: 1024px) {
   /* ipad pro*/
-  .countdown {
-    height: 1366px;
-  }
-
   li {
     font-size: 2em;
   }
@@ -124,10 +124,6 @@ li span {
 
 @media only screen and (max-width: 768px) {  
   /* ipad */
-  .countdown {
-    height: 1024px;
-  }
-
   li {
     padding: 1em;
   }
@@ -168,10 +164,6 @@ li span {
 
 @media only screen and (max-width: 414px) {
   /* iphone 6/7/8 plus*/
-  .countdown {
-    height: 736px;
-  }
-
   li {
     font-size: 2em;
   }
@@ -210,10 +202,6 @@ li span {
 
 @media only screen and (max-width: 375px) {
   /* iphone 6/7/8*/
-  .countdown {
-    height: 667px;
-  }
-
   .my_nav {
     height: 3rem;
   }
@@ -241,19 +229,8 @@ li span {
   }
 }
 
-@media only screen and (max-height: 812px) {
-  /* iphone X*/
-  .countdown {
-    height: 812px;
-  }
-}
-
 @media only screen and (max-width: 320px) {
   /* iphone 5/SE */
-  .countdown {
-    height: 568px;
-  }
-
   #text_container {
     margin-right: 5%;
   }
@@ -265,10 +242,6 @@ li span {
 
 @media only screen and (max-width: 280px) {
   /* Galaxy Fold*/
-  .countdown {
-    height: 653px;
-  }
-
   .my_nav {
     font-size: 0.8em;
   }
