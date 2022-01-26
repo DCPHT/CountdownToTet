@@ -13,6 +13,6 @@ def homepage():
     return render_template('homepage.html')
 
 
-@views.route('/fireworks')
+@views.route('/calender')
 def fireworks():
-    return render_template('fireworks.html')
+    return render_template('calender.html')
